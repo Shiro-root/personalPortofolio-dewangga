@@ -14,17 +14,17 @@ export const profile = {
   aboutBody:
     "Latar belakang saya di bidang Sistem Informasi, dan sejak itu saya lebih tertarik menyelesaikan masalah operasional nyata dibanding sekadar membangun fitur. Cara kerja saya dimulai dari memahami proses bisnis klien terlebih dahulu, baru menerjemahkannya menjadi struktur, tampilan, dan sistem yang benar-benar dipakai sehari-hari.",
   email: "halo@dewangga.dev",
-  whatsapp: "https://wa.me/6281234567890",
-  whatsappDisplay: "+62 812-3456-7890",
+  whatsapp: "https://wa.me/6289652546202",
+  whatsappDisplay: "+62 896-5254-6202",
   socials: [
-    { label: "GitHub", href: "https://github.com/" },
-    { label: "LinkedIn", href: "https://linkedin.com/" },
+    { label: "GitHub", href: "https://github.com/Shiro-root" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/dewangga-tirta-kencana-9746433a9/" },
   ],
 };
 
 export const stack = [
-  "React", "Next.js", "Node.js", "Express",
-  "PostgreSQL", "Tailwind CSS",
+  "React", "Next.js", "Node.js", "Express","Laravel",
+  "PostgreSQL", "Mysql", "Tailwind CSS",
 ];
 
 export const services = [
