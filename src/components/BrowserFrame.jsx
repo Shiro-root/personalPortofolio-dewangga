@@ -15,7 +15,7 @@ export default function BrowserFrame({ seed, image, alt, className = "" }) {
           src={src}
           alt={alt}
           loading="lazy"
-          className="aspect-[14/9] w-full object-cover transition duration-500 ease-out group-hover:scale-[1.015]"
+          className="aspect-[14/9] w-full object-contain transition duration-500 ease-out group-hover:scale-[1.015]"
         />
       </div>
     </div>

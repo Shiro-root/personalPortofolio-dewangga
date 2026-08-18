@@ -37,12 +37,12 @@ function ProjectRow({ project, reverse }) {
           <span className="h-2 w-2 rounded-full bg-mist/30" />
           <span className="h-2 w-2 rounded-full bg-mist/30" />
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden bg-panel">
           <img
             src={thumbnail}
             alt={`Tangkapan layar ${project.name}`}
             loading="lazy"
-            className="aspect-[3/2] w-full object-cover grayscale transition duration-300 ease-out group-hover:scale-[1.03] group-hover:grayscale-0"
+            className="aspect-[3/2] w-full object-contain grayscale transition duration-300 ease-out group-hover:scale-[1.03] group-hover:grayscale-0"
           />
         </div>
       </Link>
