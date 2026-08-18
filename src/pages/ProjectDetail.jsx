@@ -14,7 +14,10 @@ export default function ProjectDetail() {
   return (
     <article className="animate-fade-in">
       <div className="container-max pt-14">
-        <Link to="/#work" className="link-underline text-sm font-medium text-muted">
+        <Link
+          to="/#work"
+          className="link-underline text-sm font-medium text-muted"
+        >
           ← Kembali ke Proyek
         </Link>
 
@@ -30,7 +33,11 @@ export default function ProjectDetail() {
       </div>
 
       <div className="container-max mt-12">
-        <BrowserFrame seed={project.seed} alt={`Tampilan ${project.name}`} />
+        <BrowserFrame
+          seed={project.seed}
+          image={project.image}
+          alt={`Tampilan ${project.name}`}
+        />
       </div>
 
       <div className="container-max mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-20">
@@ -54,7 +61,10 @@ export default function ProjectDetail() {
         </h2>
         <ul className="mt-5 grid grid-cols-1 gap-x-10 gap-y-3 sm:grid-cols-2 md:grid-cols-3">
           {project.features.map((f) => (
-            <li key={f} className="border-t border-line pt-3 leading-relaxed text-ink">
+            <li
+              key={f}
+              className="border-t border-line pt-3 leading-relaxed text-ink"
+            >
               {f}
             </li>
           ))}
@@ -68,12 +78,14 @@ export default function ProjectDetail() {
         <p className="mt-4 leading-relaxed text-ink">{project.result}</p>
       </div>
 
-     <div className="container-max mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-line pt-6">
+      <div className="container-max mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-line pt-6">
         <p className="text-xs text-muted">
           <span className="uppercase tracking-[0.1em]">Teknologi:</span>{" "}
-          <span className="font-medium text-ink">{project.tech.join(", ")}</span>
+          <span className="font-medium text-ink">
+            {project.tech.join(", ")}
+          </span>
         </p>
-        
+
         {/* Render tombol HANYA jika properti demo ada di data */}
         {project.demo && (
           <a
@@ -84,17 +96,17 @@ export default function ProjectDetail() {
           >
             Lihat Live Demo
             {/* Ikon External Link */}
-            <svg 
-              className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor" 
+            <svg
+              className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
               strokeWidth={2}
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
             </svg>
           </a>

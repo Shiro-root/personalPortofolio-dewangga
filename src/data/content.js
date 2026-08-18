@@ -5,8 +5,8 @@
 import kpmGroupImg from "../assets/img/kpm-group.png";
 import lppmDarmajayaImg from "../assets/img/lppm-darmajaya.png";
 import helpdeskTicketingImg from "../assets/img/ss-helpdesk.png";
-// Tambahkan import gambar project lain di sini, misal:
-// import helpdeskTicketingImg from "../assets/img/helpdesk-ticketing.png";
+// Tambahkan import gambar project lain di sini
+
 
 export const profile = {
   name: "Dewangga",

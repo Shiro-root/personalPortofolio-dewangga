@@ -1,4 +1,6 @@
-export default function BrowserFrame({ seed, alt, className = "" }) {
+export default function BrowserFrame({ seed, image, alt, className = "" }) {
+  const src = image ?? `https://picsum.photos/seed/${seed}/1400/900`;
+
   return (
     <div
       className={`overflow-hidden rounded-md border border-line bg-surface ${className}`}
@@ -10,7 +12,7 @@ export default function BrowserFrame({ seed, alt, className = "" }) {
       </div>
       <div className="overflow-hidden bg-bg">
         <img
-          src={`https://picsum.photos/seed/${seed}/1400/900`}
+          src={src}
           alt={alt}
           loading="lazy"
           className="aspect-[14/9] w-full object-cover transition duration-500 ease-out group-hover:scale-[1.015]"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { projects } from "../data/content";
 import { SectionHeading } from "./Services";
 
@@ -18,16 +19,17 @@ export default function Projects() {
 }
 
 function ProjectRow({ project, reverse }) {
+  // Pakai gambar asli kalau ada, kalau tidak fallback ke placeholder via seed
+  const thumbnail = project.image ?? `https://picsum.photos/seed/${project.seed}/900/600`;
+
   return (
     <div
       className={`grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16 ${
         reverse ? "md:[&>*:first-child]:order-2" : ""
       }`}
     >
-      <a
-        href={project.demoUrl}
-        target="_blank"
-        rel="noreferrer"
+      <Link
+        to={`/proyek/${project.id}`}
         className="group block overflow-hidden rounded-md border border-deep bg-panel"
       >
         <div className="flex items-center gap-1.5 border-b border-deep px-4 py-2.5">
@@ -37,21 +39,21 @@ function ProjectRow({ project, reverse }) {
         </div>
         <div className="overflow-hidden">
           <img
-            src={`https://picsum.photos/seed/${project.seed}/900/600`}
+            src={thumbnail}
             alt={`Tangkapan layar ${project.name}`}
             loading="lazy"
             className="aspect-[3/2] w-full object-cover grayscale transition duration-300 ease-out group-hover:scale-[1.03] group-hover:grayscale-0"
           />
         </div>
-      </a>
+      </Link>
 
       <div>
-        <p className="text-xs text-mist/60">{project.year} &middot; {project.role}</p>
+        <p className="text-xs text-mist/60">{project.category}</p>
         <h3 className="mt-2 text-2xl font-bold text-paper">{project.name}</h3>
-        <p className="mt-4 max-w-md leading-relaxed text-mist">{project.summary}</p>
+        <p className="mt-4 max-w-md leading-relaxed text-mist">{project.shortDesc}</p>
 
         <ul className="mt-5 flex flex-wrap gap-2">
-          {project.stack.map((s) => (
+          {project.tech.map((s) => (
             <li key={s} className="rounded-sm border border-deep px-3 py-1 text-xs text-mist/80">
               {s}
             </li>
@@ -59,22 +61,22 @@ function ProjectRow({ project, reverse }) {
         </ul>
 
         <div className="mt-7 flex flex-wrap items-center gap-6">
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-sm bg-cyan px-5 py-2.5 text-sm font-semibold text-ink transition hover:brightness-90 active:-translate-y-px"
-          >
-            Lihat Demo
-          </a>
-          <a
-            href={project.codeUrl}
-            target="_blank"
-            rel="noreferrer"
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-sm bg-cyan px-5 py-2.5 text-sm font-semibold text-ink transition hover:brightness-90 active:-translate-y-px"
+            >
+              Lihat Demo
+            </a>
+          )}
+          <Link
+            to={`/proyek/${project.id}`}
             className="link-underline text-sm font-medium text-mist"
           >
-            Lihat Kode
-          </a>
+            Lihat Detail
+          </Link>
         </div>
       </div>
     </div>
