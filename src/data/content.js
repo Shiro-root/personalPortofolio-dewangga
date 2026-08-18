@@ -157,7 +157,7 @@ export const projects = [
     ],
     result:
       "Permintaan dukungan lebih jarang terlewat, dan setiap tim tahu prioritas kerja mereka setiap hari.",
-    tech: ["React", "Node.js", "PostgreSQL"],
+    tech: ["Laravel", "Tailwind", "MySQL"],
   },
   {
     id: "proposal-monitoring",
