@@ -158,6 +158,7 @@ export const projects = [
     result:
       "Permintaan dukungan lebih jarang terlewat, dan setiap tim tahu prioritas kerja mereka setiap hari.",
     tech: ["Laravel", "Tailwind", "MySQL"],
+    demo: "https://ticketingdesk.freedev.app",
   },
   {
     id: "proposal-monitoring",

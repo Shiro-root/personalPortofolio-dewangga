@@ -71,7 +71,9 @@ export default function ProjectDetail() {
       <div className="container-max mt-14 border-t border-line pt-6">
         <p className="text-xs text-muted">
           Teknologi: {project.tech.join(", ")}
+          Demo: {project.demo}
         </p>
+        
       </div>
 
       <div className="container-max mt-24 border-t border-line py-20 text-center">
