@@ -31,7 +31,11 @@ function FullWork({ project }) {
   return (
     <article>
       <Link to={`/proyek/${project.id}`} className="group block">
-        <BrowserFrame seed={project.seed} alt={`Tangkapan layar ${project.name}`} />
+        <BrowserFrame
+          seed={project.seed}
+          image={project.image}
+          alt={`Tangkapan layar ${project.name}`}
+        />
       </Link>
       <div className="mt-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
         <div>
@@ -56,7 +60,11 @@ function SplitWork({ project }) {
   return (
     <article className="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-14">
       <Link to={`/proyek/${project.id}`} className="group block md:col-span-7">
-        <BrowserFrame seed={project.seed} alt={`Tangkapan layar ${project.name}`} />
+        <BrowserFrame
+          seed={project.seed}
+          image={project.image}
+          alt={`Tangkapan layar ${project.name}`}
+        />
       </Link>
 
       <div className="md:col-span-5">
