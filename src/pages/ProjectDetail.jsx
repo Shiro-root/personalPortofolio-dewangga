@@ -68,12 +68,37 @@ export default function ProjectDetail() {
         <p className="mt-4 leading-relaxed text-ink">{project.result}</p>
       </div>
 
-      <div className="container-max mt-14 border-t border-line pt-6">
+     <div className="container-max mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-line pt-6">
         <p className="text-xs text-muted">
-          Teknologi: {project.tech.join(", ")}
-          Demo: {project.demo}
+          <span className="uppercase tracking-[0.1em]">Teknologi:</span>{" "}
+          <span className="font-medium text-ink">{project.tech.join(", ")}</span>
         </p>
         
+        {/* Render tombol HANYA jika properti demo ada di data */}
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.1em] text-accent transition-all hover:text-ink"
+          >
+            Lihat Live Demo
+            {/* Ikon External Link */}
+            <svg 
+              className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor" 
+              strokeWidth={2}
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+              />
+            </svg>
+          </a>
+        )}
       </div>
 
       <div className="container-max mt-24 border-t border-line py-20 text-center">
