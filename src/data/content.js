@@ -4,6 +4,7 @@
 
 import kpmGroupImg from "../assets/img/kpm-group.png";
 import lppmDarmajayaImg from "../assets/img/lppm-darmajaya.png";
+import helpdeskTicketingImg from "../assets/img/ss-helpdesk.png";
 // Tambahkan import gambar project lain di sini, misal:
 // import helpdeskTicketingImg from "../assets/img/helpdesk-ticketing.png";
 
@@ -151,6 +152,7 @@ export const projects = [
       "Sistem tiket untuk membantu tim internal mencatat, melacak, dan menyelesaikan permintaan dukungan.",
     layout: "full",
     seed: "helpdesk-ticketing-app",
+    image: helpdeskTicketingImg,
     challenge:
       "Permintaan bantuan dari berbagai divisi masuk lewat chat pribadi dan email, sehingga sering terlewat atau tidak jelas siapa yang menangani.",
     solution:
