@@ -2,6 +2,11 @@
 // SATU-SATUNYA FILE YANG PERLU DIEDIT UNTUK GANTI ISI PORTOFOLIO
 // ─────────────────────────────────────────────────────────────
 
+import kpmGroupImg from "../assets/img/kpm-group.png";
+import lppmDarmajayaImg from "../assets/img/lppm-darmajaya.png";
+// Tambahkan import gambar project lain di sini, misal:
+// import helpdeskTicketingImg from "../assets/img/helpdesk-ticketing.png";
+
 export const profile = {
   name: "Dewangga",
   fullName: "Dewangga Tirta Kencana",
@@ -91,27 +96,29 @@ export const trust = [
 // layout: "full" = full-width visual, "split" = large visual + text side by side
 export const projects = [
   {
-    id: "company-profile",
-    name: "Company Profile",
+    id: "kpm-group",
+    name: "KPM Group — Company Profile",
     category: "Website Bisnis",
     shortDesc:
-      "Website perusahaan untuk memperkenalkan profil, layanan, dan portofolio kerja secara profesional.",
+      "Website company profile untuk PT. Kurniawan Power Mandiri, lengkap dengan admin panel untuk mengelola konten sendiri.",
     layout: "full",
-    seed: "company-profile-site",
+    seed: "kpm-group-site",
+    image: kpmGroupImg,
     challenge:
-      "Perusahaan belum punya kehadiran digital yang mencerminkan skala bisnisnya. Calon klien sering ragu sebelum menghubungi karena tidak ada referensi profil yang jelas.",
+      "PT. Kurniawan Power Mandiri belum punya kehadiran digital yang mencerminkan skala bisnisnya di bidang konstruksi dan engineering. Konten seperti hero, layanan, dan logo divisi juga perlu bisa diperbarui sendiri oleh tim internal tanpa bergantung pada developer.",
     solution:
-      "Dibangun website company profile dengan struktur yang jelas — profil, layanan, portofolio, dan kontak — supaya calon klien bisa memahami bisnis dalam hitungan detik.",
+      "Dibangun website company profile dengan Laravel dan admin panel Filament, sehingga tim internal bisa mengelola hero slider, layanan, dan logo divisi sendiri dari dashboard tanpa menyentuh kode.",
     features: [
-      "Halaman profil perusahaan",
-      "Daftar layanan",
-      "Galeri portofolio kerja",
-      "Formulir kontak",
-      "Optimasi untuk pencarian Google",
+      "Hero slider yang dikelola lewat admin panel",
+      "Kartu layanan dengan tampilan modal",
+      "Integrasi logo divisi dari admin panel ke halaman utama",
+      "Bento grid untuk bagian \"Why Us\"",
+      "Admin panel berbahasa Indonesia (Filament)",
     ],
     result:
-      "Calon klien kini bisa mengenal bisnis lebih cepat sebelum menghubungi, sehingga percakapan awal jadi lebih terarah.",
-    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+      "Perusahaan kini punya website profesional yang mencerminkan skala bisnisnya, dengan konten yang bisa diperbarui sendiri oleh tim internal kapan saja.",
+    tech: ["Laravel", "Filament", "Tailwind CSS", "Alpine.js", "Vite"],
+    demo: "https://kpmgroupofficial.co.id/",
   },
   {
     id: "inventory-management",
@@ -161,26 +168,28 @@ export const projects = [
     demo: "https://ticketingdesk.freedev.app",
   },
   {
-    id: "proposal-monitoring",
-    name: "Proposal Monitoring System",
+    id: "lppm-darmajaya",
+    name: "Sistem Pengelolaan Proposal LPPM Darmajaya",
     category: "Sistem Internal",
     shortDesc:
-      "Sistem untuk memantau status pengajuan proposal dari draf sampai disetujui.",
+      "Platform untuk LPPM IIB Darmajaya dalam mengelola proposal penelitian dan pengabdian masyarakat dari pengajuan sampai disetujui.",
     layout: "split",
-    seed: "proposal-monitoring-app",
+    seed: "lppm-darmajaya-app",
+    image: lppmDarmajayaImg,
     challenge:
-      "Status proposal — mulai dari diajukan, direvisi, sampai disetujui — hanya diketahui lewat tanya langsung ke penanggung jawab, sehingga sulit dipantau atasan.",
+      "Proses pengajuan proposal penelitian dan pengabdian di IIB Darmajaya masih sulit dipantau — dosen dan pihak LPPM tidak punya cara terpusat untuk melihat status proposal, skema pendanaan, atau panduan yang berlaku sesuai Panduan LPPM 2025.",
     solution:
-      "Dibangun sistem pemantauan yang menampilkan status tiap proposal secara transparan, lengkap dengan riwayat revisi dan pihak yang bertanggung jawab.",
+      "Dibangun sistem terintegrasi berbasis Laravel dengan validasi multi-level, sehingga pengajuan, skema pendanaan, alur kerja, dan template dokumen bisa diakses transparan lewat satu portal.",
     features: [
-      "Pengajuan dan revisi proposal",
-      "Status berjenjang (draf, revisi, disetujui)",
-      "Riwayat perubahan",
-      "Notifikasi status",
-      "Dashboard ringkasan untuk atasan",
+      "Portal pengajuan proposal penelitian dan pengabdian",
+      "Validasi status berjenjang (multi-level)",
+      "Informasi skema pendanaan dan alur kerja",
+      "Panduan dan template dokumen yang bisa diunduh",
+      "Portal login untuk dosen dan pengelola LPPM",
     ],
     result:
-      "Atasan bisa memantau progres proposal tanpa harus menanyakan satu per satu, mempercepat proses persetujuan.",
-    tech: ["React", "Express", "PostgreSQL"],
+      "LPPM dan dosen kini punya satu sistem terpusat untuk mengelola proposal secara transparan dan efisien, sesuai Panduan LPPM IIB Darmajaya 2025.",
+    tech: ["Laravel", "MySQL", "Tailwind CSS"],
+    demo: "https://lp2m.darmajaya.ac.id/",
   },
 ];
